@@ -1,0 +1,318 @@
+body{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.fundoApp{
+    background: #9dd53a; /* Old browsers */
+    background: -moz-linear-gradient(top, #9dd53a 0%, #a1d54f 45%, #7cbc0a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #9dd53a 0%,#a1d54f 45%,#7cbc0a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #9dd53a 0%,#a1d54f 45%,#7cbc0a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+}
+
+.textoContador{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 158px;
+}
+
+.botaoProximo{
+    margin-left: 10px;
+    width: 120px;
+}
+
+.botaoCamera{
+    width: 50px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: -48px;
+}
+
+.efeitoFoto{
+    background-color: #000000;
+    position: absolute;
+    z-index: 9999999999;
+    top: 10px;
+    width: 380px;
+    height: 286px;
+}
+
+.video{
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.videoAutenticar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.iamgemIcone{
+    width: 120px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.foto{
+    height: 286px;
+}
+
+.caixaAlerta{
+    background-color: #b13f3f;
+    color: #FFFFFF;
+    text-align: center;
+    height: 58px;
+    padding-top: 18px;
+    position: absolute;
+    width: 100vw;
+    box-shadow: 1px 1px 11px #333333;
+    font-weight: 600;
+}
+
+.textoSucesso{
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+progress::-webkit-progress-bar {
+    background-color: #eee;
+}
+
+progress::-webkit-progress-value { 
+    background: #444444; 
+}
+
+.textoCarregando{
+    position: fixed;
+    bottom: 0;
+    color: #FFFFFF;
+    z-index: 99999;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carregando{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.textoLogin{
+    height: 40px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.localVideoAutenticar{
+
+}
+
+
+.localBotoesBottom{
+    position: absolute;
+    bottom: 0;
+    max-height: 50px !important;
+    width: 100vw;
+    min-height: 50px !important;
+}
+
+.botaoBottom{
+    border: 0;
+    background-color: #78a923;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.textoOlhe{
+    color: #638c1b;
+    font-weight: 700;
+    font-size: 27px;
+    text-align: center;
+    height: 0;
+    position: absolute;
+    margin-top: -80px;
+    width: 240px;
+    margin-left: 70px;
+}
+
+.caixaAparecendo{
+    max-width: fit-content;
+    margin: auto;
+    background-color: #b13f3f;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 11px;
+    position: relative;
+    box-shadow: 1px 1px 11px #0e0e0e;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #FFFFFF;
+    font-weight: 600;
+    z-index: 99999999;
+}
+
+#eyeCanvasLeft{
+    position: absolute;
+    top: 0;
+
+}
+
+#eyeCanvasRight{
+        position: absolute;
+    top: 0;
+}
+
+#container {
+    position : relative;
+}
+
+#canvas {
+    position : absolute;
+    left : 0;
+    top : 0;
+}
+
+.bolaIcone{
+    width: 130px;
+    background-color: #ffffff2b;
+    text-align: center;
+    border-radius: 130px;
+    height: 130px;
+    padding-top: 24px;
+    margin: auto;
+    margin-top: -77px;
+    margin-bottom: 30px;
+}
+
+.textoOlhe{
+    color: #78a923;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    height: 0;
+    position: absolute;
+    margin-top: -67px;
+}
+
+.bolaFundoVideo{
+    position: absolute;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+.botaoTirarFoto:disabled{
+    opacity: 0.2;
+    cursor: default;
+}
+
+.botaoTirarFoto{
+    margin-bottom: -37px;
+    height: 50px;
+    min-height: 50px;
+    margin-top: -50px;
+    z-index: 999999;
+}
+
+.localVideo{
+    position: absolute;
+}
+
+.telaIniciar{
+    width: 400px;
+    height: 363px;
+
+    padding: 10px;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.localFotoFrente{
+    padding: 10px;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    height: 363px;
+
+    max-width: 400px;
+    max-height: 363px;
+}
+
+.localFotoEsq{
+    padding: 10px;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    height: 363px;
+
+    max-width: 400px;
+    max-height: 363px;
+}
+
+.localFotoDir{
+    padding: 10px;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    height: 363px;
+
+    max-width: 400px;
+    max-height: 363px;
+}
+
+.botoes{
+    border: 0;
+    background-color: #78a923;
+    color: #406926;
+    font-size: 21px;
+    height: 50px;
+    min-height: 50px;
+    padding-top: 4px;
+}
+
+.botaoLogin{
+    border: 0;
+    background-color: #78a923;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 700;
+    height: 40px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}

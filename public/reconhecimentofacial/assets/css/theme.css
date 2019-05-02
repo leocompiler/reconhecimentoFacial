@@ -1,0 +1,8 @@
+.caixaNovaMsg{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #444444;
+    right: 0;
+    bottom: 0;
+}
