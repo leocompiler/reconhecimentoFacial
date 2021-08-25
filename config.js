@@ -8,7 +8,7 @@ var development = {
 	httpPort : 8080,
 	httpHost : '127.0.0.1',
 	portWebsocket : 4000,
-	urlDataBase : '10.222.18.110:27017',
+	urlDataBase : 'localhost:27017/reconhecimento-facial',
 	APP_MULT_THREADS : true,
 };
 

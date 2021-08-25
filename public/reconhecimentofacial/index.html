@@ -3,49 +3,60 @@
 
 <head>
     <meta charset="utf-8">
-    <base href="/">
+    <base href="./">
     <meta http-equiv="X-UA-Compatible" content="IE=11">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="application-name" content="Caixa">
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="reconhecimentofacial/assets/img/favicon.png">
 
-    <link rel="stylesheet" href="reconhecimentofacial/assets/css/jquery.mCustomScrollbar.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-        rel="stylesheet">
-    <link href="reconhecimentofacial/assets/css/app.css" rel="stylesheet">
+    <script src="config.js"></script>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script data-pace-options='{ "ajax": false }' src="assets/js/pace.min.js"></script>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/face-api.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-animate.min.js"></script>
+    <script src="assets/js/angular-aria.min.js"></script>
+    <script src="assets/js/angular-material.min.js"></script>
+    <script src="assets/js/ui-bootstrap.min.js"></script>
+    
+    <script src="controllers/appController.js"></script>
+    <script src="services/appServices.js"></script>
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" >
+    <link rel="stylesheet" href="assets/css/app.css" >
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/angular-material.min.css">
+
+
+
 </head>
 
 <body id="" data-spy="scroll" class="bodyTop fundoApp" data-target=".navbar-fixed-top" style="overflow: hidden;">
-    <script data-pace-options='{ "ajax": false }' src="reconhecimentofacial/assets/js/pace.min.js"></script>
-    <script src="reconhecimentofacial/config.js"></script>
-    <script src="reconhecimentofacial/assets/js/jquery.js"></script>
-    <script src="reconhecimentofacial/assets/js/bootstrap.min.js"></script>
-    <script src="reconhecimentofacial/js/utils.js"></script>
-    <script src="reconhecimentofacial/js/jquery-ui.min.js"></script>
-    <script src="reconhecimentofacial/js/face-api.js"></script>
-    <script src="reconhecimentofacial/assets/js/angular.min.js"></script>
-    <script src="reconhecimentofacial/assets/js/angular-animate.min.js"></script>
-    <script src="reconhecimentofacial/assets/js/angular-aria.min.js"></script>
-    <script src="reconhecimentofacial/assets/js/angular-material.min.js"></script>
-    <script src="reconhecimentofacial/assets/js/ui-bootstrap.min.js"></script>
-    <script src="reconhecimentofacial/controllers/appController.js"></script>
-    <script src="reconhecimentofacial/services/appServices.js"></script>
 
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="reconhecimentofacial/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="reconhecimentofacial/assets/css/jquery-ui.css">
-
-    <link rel="stylesheet" type="text/css" href="reconhecimentofacial/assets/css/angular-material.min.css">
 
     <div ng-cloak ng-app="appjogo" ng-controller="appController as tt" class="content-body" id="home">
         <div ng-show="tt.mostraCarregandoHome==true">
-            <img src="reconhecimentofacial/assets/carregando.gif" class="carregando" style="width: 55px;">
+            <img src="assets/carregando.gif" class="carregando" style="width: 55px;">
 
-            <progress class="carregando carregandoApp" style="height: 10px;margin-top: 40px;" value="{{tt.itemCarregado}}" max="4">
+            <progress class="carregando carregandoApp" style="height: 10px;margin-top: 40px;" value="{{tt.itemCarregado}}"
+                max="4">
             </progress>
         </div>
 
@@ -68,7 +79,7 @@
             <div ng-show="tt.mostraLogin == true">
                 <div layout="column" style="top:50%; left:50%; position:absolute; transform:translate(-50%, -50%);">
                     <div class="bolaIcone">
-                        <img src="reconhecimentofacial/assets/mobile-app.png" style="width: 80px;opacity: 0.9;">
+                        <img src="assets/mobile-app.png" style="width: 80px;opacity: 0.9;">
                     </div>
 
                     <div style="color: #FFFFFF;">Selecione um usuário</div>
@@ -77,12 +88,11 @@
                     </select>
                     <button ng-click="tt.entrarLogin()" class="botaoLogin">Entrar</button>
                     <button ng-click="tt.cadastrar()" class="botaoLogin">Cadastrar</button>
-                    
+
                 </div>
             </div>
 
-            <div layout="column" class="textoSucesso" flex ng-show="tt.mostraSucessoCadastrado == true"
-                style="color: #FFFFFF">
+            <div layout="column" class="textoSucesso" flex ng-show="tt.mostraSucessoCadastrado == true" style="color: #FFFFFF">
                 <div style="    color: #78a923;;font-size: 95px;"><i class="fa fa-check" aria-hidden="true"></i></div>
                 <div style="    font-weight: 700;font-size: 19px;margin-top: -17px;width: 190px;    color: #668a27;">
                     Usuário cadastrado com sucesso
@@ -91,10 +101,9 @@
 
             <div ng-show="tt.mostraCadastro == true" style="    height: 100vh;">
 
-                <div style="top:50%; left:50%; position:absolute; transform:translate(-50%, -50%);"
-                    ng-show="tt.enviaFotos == false">
+                <div style="top:50%; left:50%; position:absolute; transform:translate(-50%, -50%);" ng-show="tt.enviaFotos == false">
                     <div class="bolaIcone">
-                        <img src="reconhecimentofacial/assets/team.png" style="width: 80px;opacity: 0.9;">
+                        <img src="assets/team.png" style="width: 80px;opacity: 0.9;">
                     </div>
 
                     <div style="color: #597d1b;    font-weight: 600;padding-bottom: 5px;padding-top: 5px;">Informe o Id
@@ -105,8 +114,8 @@
                     <input class="textoLogin" ng-model="tt.nome" style="width: 240px;">
 
                     <button flex ng-show="tt.mostraCadastro == true" ng-click="tt.enviarFotos()" class="botaoBottom"
-                        style="padding: 10px;border-radius: 5px;margin-top: 14px;"><i class="fa fa-camera"
-                            aria-hidden="true" style="margin-right: 11px;"></i>Tirar foto e salvar</button>
+                        style="padding: 10px;border-radius: 5px;margin-top: 14px;"><i class="fa fa-camera" aria-hidden="true"
+                            style="margin-right: 11px;"></i>Tirar foto e salvar</button>
                 </div>
 
 
@@ -114,14 +123,12 @@
                     <div flex class="localVideo" layout="column" style="    width: 100%;height: 100vh;">
                         <div layout="column" style="min-height: 100vh;">
 
-                            <div class="localBolasFoto"
-                                style="margin: auto;    margin-top: 110px;margin-bottom: 0;">
+                            <div class="localBolasFoto" style="margin: auto;    margin-top: 110px;margin-bottom: 0;">
                                 <div class="bolaFundoVideo">
 
                                 </div>
 
-                                <div class="bolaFundoVideo boxPodeTirar"
-                                    ng-style="{'border-color':(tt.podeTirarFoto)?'#41bb22':'#b13f3f'}"
+                                <div class="bolaFundoVideo boxPodeTirar" ng-style="{'border-color':(tt.podeTirarFoto)?'#41bb22':'#b13f3f'}"
                                     style="    border: 5px solid #41bb22;">
 
                                 </div>
@@ -137,21 +144,19 @@
 
                                 <div style="    color: #FFFFFF;margin-bottom: 40px;">Enquadre o seu rosto no circulo
                                     acima</div>
-                                <button ng-disabled="tt.podeTirarFoto == false" ng-click="tt.tirarFoto()"
-                                    class="botaoTirarFoto botoes botaoCamera " style="    margin-bottom: 20px;">
+                                <button ng-disabled="tt.podeTirarFoto == false" ng-click="tt.tirarFoto()" class="botaoTirarFoto botoes botaoCamera "
+                                    style="    margin-bottom: 20px;">
                                     <i class="fa fa-camera" aria-hidden="true"></i>
                                 </button>
                             </div>
 
                             <video id="videoCadastrar" class="video" autoplay></video>
 
-                            <canvas id="overlay" class="overlay"
-                                style="    width: 100%;min-height: 100vh;object-fit: cover;position: absolute;">
+                            <canvas id="overlay" class="overlay" style="    width: 100%;min-height: 100vh;object-fit: cover;position: absolute;">
                             </canvas>
                         </div>
 
-                        <canvas class="fotoCadastro"
-                            style="z-index: 999;margin-top: 327px;">
+                        <canvas class="fotoCadastro" style="z-index: 999;margin-top: 327px;">
 
                         </canvas>
 
@@ -163,7 +168,7 @@
                     <div flex class="localFotoFrente" layout="column">
                         <div class="textoOlhe">Olhe para frente</div>
                         <canvas class="imgFotoFrente foto" style="width:400px; height:400px"></canvas>
-                        <img class="iamgemIcone iamgemIcone1" src="reconhecimentofacial/assets/olhando_Frente.png">
+                        <img class="iamgemIcone iamgemIcone1" src="assets/olhando_Frente.png">
                         <div class="efeitoFoto">
 
                         </div>
@@ -178,7 +183,7 @@
                     <div flex class="localFotoEsq" layout="column" width=400 height=400>
                         <div class="textoOlhe">Foto 2/3: Olhe para Esquerda</div>
                         <canvas class="imgFotoEsq foto" width=400></canvas>
-                        <img class="iamgemIcone iamgemIcone2" src="reconhecimentofacial/assets/olhando_esq.png">
+                        <img class="iamgemIcone iamgemIcone2" src="assets/olhando_esq.png">
 
                         <div class="efeitoFoto">
 
@@ -193,7 +198,7 @@
                     <div class="localFotoDir" layout="column" width=400 height=400>
                         <div class="textoOlhe">Foto 3/3: Olhe para Direita</div>
                         <canvas class="imgFotoDir foto" width=400></canvas>
-                        <img class="iamgemIcone iamgemIcone3" src="reconhecimentofacial/assets/olhando_dir.png">
+                        <img class="iamgemIcone iamgemIcone3" src="assets/olhando_dir.png">
 
                         <div class="efeitoFoto">
 
@@ -213,18 +218,15 @@
                 <div layout="column" ng-show="tt.mostraAutenticar == true">
 
 
-                    <div flex class="localVideoAutenticar" layout="column"
-                        style="    position: absolute;width: 100%;height: 100vh;">
+                    <div flex class="localVideoAutenticar" layout="column" style="    position: absolute;width: 100%;height: 100vh;">
 
 
-                        <div class="localBolasFotoAuth"
-                            style="margin: auto;    margin-top: 110px;margin-bottom: 0;">
+                        <div class="localBolasFotoAuth" style="margin: auto;    margin-top: 110px;margin-bottom: 0;">
                             <div class="bolaFundoVideo">
 
                             </div>
 
-                            <div class="bolaFundoVideo boxPodeTirar"
-                                ng-style="{'border-color':(tt.podeAutenticar)?'#41bb22':'#b13f3f'}"
+                            <div class="bolaFundoVideo boxPodeTirar" ng-style="{'border-color':(tt.podeAutenticar)?'#41bb22':'#b13f3f'}"
                                 style="    border: 5px solid #41bb22;">
                             </div>
                         </div>
@@ -239,41 +241,37 @@
                             </div>
 
                             <div style="color: #FFFFFF;margin-bottom: 40px;">Enquadre o seu rosto no circulo acima</div>
-                            <button ng-disabled="tt.podeTirarFoto == false" ng-click="tt.tirarFoto()"
-                                class="botaoTirarFoto botoes botaoCamera " style="    margin-bottom: 20px;">
+                            <button ng-disabled="tt.podeTirarFoto == false" ng-click="tt.tirarFoto()" class="botaoTirarFoto botoes botaoCamera "
+                                style="    margin-bottom: 20px;">
                                 <i class="fa fa-camera" aria-hidden="true"></i>
                             </button>
                         </div>
 
                         <video id="videoAutenticar" class="videoAutenticar" autoplay></video>
-                        <canvas id="overlayAuth" class="overlay"
-                            style="width: 400px;height: 400px;position:absolute;    margin-top: -57px;"></canvas>
-                        <img src="reconhecimentofacial/assets/carregando.gif" ng-show="tt.verificandoFoto == true" class="carregando" style="width: 55px;    position: fixed;bottom: 40px;top: auto;z-index: 99999;">
-                        <div class="textoCarregando" ng-show="tt.verificandoFoto == true">Reconhecendo usuário, aguarde.</div>
+                        <canvas id="overlayAuth" class="overlay" style="width: 400px;height: 400px;position:absolute;    margin-top: -57px;"></canvas>
+                        <img src="assets/carregando.gif" ng-show="tt.verificandoFoto == true" class="carregando" style="width: 55px;    position: fixed;bottom: 40px;top: auto;z-index: 99999;">
+                        <div class="textoCarregando" ng-show="tt.verificandoFoto == true">Reconhecendo usuário,
+                            aguarde.</div>
                     </div>
 
-                    <canvas class="imgFotoEnviarAuth"
-                        style="display:none;z-index: 999;margin-top: 327px;">
-                        <canvas class="imgFotoValidar"
-                            style="display:none;z-index: 999;margin-top: 327px;">
+                    <canvas class="imgFotoEnviarAuth" style="display:none;z-index: 999;margin-top: 327px;">
+                        <canvas class="imgFotoValidar" style="display:none;z-index: 999;margin-top: 327px;">
 
                             <button style="    width: 50px;max-height: 50px;position: absolute;top: 60px;left: 10px;"
-                                flex ng-click="tt.voltarHome()" class="botaoTirarFoto botoes botaoCamera"><i
-                                    class="fa fa-times" aria-hidden="true" style="margin-bottom: -37px;"></i></button>
+                                flex ng-click="tt.voltarHome()" class="botaoTirarFoto botoes botaoCamera"><i class="fa fa-times"
+                                    aria-hidden="true" style="margin-bottom: -37px;"></i></button>
                 </div>
 
 
 
                 <div layout="column" ng-show="tt.mostraAuto == true">
 
-                    <div class="localBolasFoto"
-                        style="margin: auto;    margin-top: 110px;margin-bottom: 0;">
+                    <div class="localBolasFoto" style="margin: auto;    margin-top: 110px;margin-bottom: 0;">
                         <div class="bolaFundoVideo">
 
                         </div>
 
-                        <div class="bolaFundoVideo boxPodeTirar"
-                            ng-style="{'border-color':(tt.podeTirarFoto)?'#41bb22':'#b13f3f'}"
+                        <div class="bolaFundoVideo boxPodeTirar" ng-style="{'border-color':(tt.podeTirarFoto)?'#41bb22':'#b13f3f'}"
                             style="    border: 5px solid #41bb22;">
 
                         </div>
@@ -281,25 +279,22 @@
 
                     <canvas class="imgFotoAuto foto" width=400 style="display:none"></canvas>
 
-                    <div flex class="localVideoAutenticar" layout="column"
-                        style="    position: absolute;width: 100%;height: 100vh;">
+                    <div flex class="localVideoAutenticar" layout="column" style="    position: absolute;width: 100%;height: 100vh;">
                         <div layout="column" style="min-height: 100vh;">
 
-                            <div class="localBolasFoto"
-                                style="margin: auto;    margin-top: 110px;margin-bottom: 0;">
+                            <div class="localBolasFoto" style="margin: auto;    margin-top: 110px;margin-bottom: 0;">
                                 <div class="bolaFundoVideo">
 
                                 </div>
 
-                                <div class="bolaFundoVideo boxPodeTirar"
-                                    ng-style="{'border-color':(tt.podeTirarFoto)?'#41bb22':'#b13f3f'}"
+                                <div class="bolaFundoVideo boxPodeTirar" ng-style="{'border-color':(tt.podeTirarFoto)?'#41bb22':'#b13f3f'}"
                                     style="    border: 2px solid #41bb22;">
 
                                 </div>
                             </div>
-                            <div
-                                style="height:0px;bottom: 142px;position: absolute;left: 50%;transform: translate(-50%, -50%);width: fit-content;">
-                                <div class="caixaAparecendo" ng-show="tt.qtdPessoasVideo == 0">Atenção, olhe diretamente
+                            <div style="height:0px;bottom: 142px;position: absolute;left: 50%;transform: translate(-50%, -50%);width: fit-content;">
+                                <div class="caixaAparecendo" ng-show="tt.qtdPessoasVideo == 0">Atenção, olhe
+                                    diretamente
                                     para a camera</div>
                                 <div class="caixaAparecendo" ng-show="tt.qtdPessoasVideo > 1">{{tt.qtdPessoasVideo}}
                                     pessoas
@@ -307,8 +302,7 @@
                             </div>
                             <video id="videoAuto" autoplay></video>
 
-                            <canvas id="overlayAuth" class="overlayAuth"
-                                style="width: 400px;height: 400px;position:absolute;margin-top: -57px;"></canvas>
+                            <canvas id="overlayAuth" class="overlayAuth" style="width: 400px;height: 400px;position:absolute;margin-top: -57px;"></canvas>
                         </div>
 
                     </div>
@@ -320,8 +314,7 @@
                 </div>
                 <div ng-show="tt.mostraBemVindo == true">
                     <div style="width: 100%; height:100vh" class="localBemVindo">
-                        <img class="imgFotoBemVindo" ng-src="{{tt.usuarioLogado.fotoUsuario}}"
-                            style="width: 100%;border-bottom: 7px solid #ffffff54;">
+                        <img class="imgFotoBemVindo" ng-src="{{tt.usuarioLogado.fotoUsuario}}" style="width: 100%;border-bottom: 7px solid #ffffff54;">
                         <div style="    padding: 9px;color: #fff;text-align: center;font-size: 45px;height: 100vh;">
                             <div style="font-size: 20px;margin-top: 30px;">Bem Vindo</div>
                             <div style="font-size: 34px;margin-bottom: 8px;">{{tt.usuarioLogado.nomeUsuario}}</div>
@@ -330,12 +323,10 @@
                     </div>
                 </div>
 
-                <div layout="column" class="textoSucesso" flex ng-show="tt.erroAutenticacao == true"
-                    style="color: #FFFFFF">
+                <div layout="column" class="textoSucesso" flex ng-show="tt.erroAutenticacao == true" style="color: #FFFFFF">
                     <div style="    color: #78a923;;font-size: 95px;"><i class="fa fa-times" aria-hidden="true"></i>
                     </div>
-                    <div
-                        style="    font-weight: 700;font-size: 19px;margin-top: -17px;width: 250px;    color: #668a27;">
+                    <div style="    font-weight: 700;font-size: 19px;margin-top: -17px;width: 250px;    color: #668a27;">
                         Não foi possível reconhecer o usuário após 3 tentativas.
                     </div>
                 </div>
@@ -345,14 +336,11 @@
 
                 </div>
             </div>
-            <div flex layout="column" class="localBotoesBottom" style="max-height: 40px;"
-                ng-show="tt.mostraBotoesBottom == true">
+            <div flex layout="column" class="localBotoesBottom" style="max-height: 40px;" ng-show="tt.mostraBotoesBottom == true">
                 <div layout="row" flex ng-show="tt.mostraBotoesHome == true" style="flex:1;">
 
-                    <button ng-show="tt.mostraCadastro == true" flex ng-click="tt.voltarHome()"
-                        class="botaoBottom">Voltar</button>
-                    <button flex ng-show="tt.mostraCadastro == false" ng-click="tt.autenticar()"
-                        class="botaoBottom">Autenticar</button>
+                    <button ng-show="tt.mostraCadastro == true" flex ng-click="tt.voltarHome()" class="botaoBottom">Voltar</button>
+                    <button flex ng-show="tt.mostraCadastro == false" ng-click="tt.autenticar()" class="botaoBottom">Autenticar</button>
                 </div>
 
                 <div layout="row" flex ng-show="tt.mostraSucessoCadastrado == true" style="flex:1;">
@@ -369,6 +357,8 @@
             </div>
         </div>
     </div>
+
+
 </body>
 
 </html>

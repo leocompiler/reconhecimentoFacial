@@ -16,9 +16,8 @@ modelo.cadastrarUsuario = function(idUsuario, nomeUsuario, fotoUsuario){
 	});
 }
 
-modelo.listarUsuarios = function(){
-    return tabUsuarios.find({}, function (e, lista) {
-		return Promise.resolve(lista);
-	});
+modelo.listarUsuarios = async function(){
+    let lista = await  tabUsuarios.find({});
+    return lista
 }
 

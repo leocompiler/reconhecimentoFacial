@@ -14,6 +14,7 @@ var express = require('express'),
     global.pathRootApp = path.resolve(__dirname);
 
     var Promise = require('promise-polyfill').default;
+    var expressStaticGzip = require("express-static-gzip");
     
 require('express-helpers')(app);
 require("console-stamp")(console, { pattern: "dd/mm/yyyy HH:MM:ss.l" });
@@ -27,10 +28,18 @@ global.cfg = cfg;
 // view engine setup
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.use('/reconhencimentofacial', express.static(__dirname + '/public/reconhecimentofacial', { 'index': 'index.html' }));
+app.use('/reconhencimentofacial',expressStaticGzip(__dirname + '/public/reconhecimentofacial' ,  {
+    enableBrotli: true,
+    customCompressions: [{
+        encodingName: 'deflate',
+        fileExtension: 'zz'
+    }],
+    orderPreference: ['br']
+}));
+// app.use('/reconhencimentofacial', express.static(__dirname + '/public/reconhecimentofacial', { 'index': 'index.html' }));
 
 //Controle de sessão via cookie-session
-//var secretKey = 'c4ix4p0up3pl4netA';
+//var secretKey = 'c4ix4p0up3pl4netA'
 var secretKey = 'l0t3ric@s3';
 app.use(cookieSession({ name: 'authSession', keys: [secretKey] }));
 

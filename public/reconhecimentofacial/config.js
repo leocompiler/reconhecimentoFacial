@@ -1,8 +1,8 @@
 var connectApp =
   {
 
-    protocol: "",
-    host: "",
+    protocol: "https",
+    host: "lab.sicoobnet.com.br",
     port: "",
     hostWebsocket: "",
 

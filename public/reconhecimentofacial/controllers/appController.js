@@ -40,7 +40,7 @@ appT.controller('appController', function ($scope, $http, $timeout, pontosJogos,
 
 	var tempoAutenticacao = null;
 
-	const MODEL_URL = '/reconhecimentofacial/models'
+	const MODEL_URL = 'https://lab.sicoobnet.com.br/reconhecimentofacial/models'
 
 	$('.caixaAlerta').css({ 'margin-top': -100 });
 	$('.caixaAlerta').css({ 'opacity': 0 });
@@ -54,7 +54,7 @@ appT.controller('appController', function ($scope, $http, $timeout, pontosJogos,
 
 	$('.botoesFotoFrente').hide();
 
-	buscarDefinicoes();
+	// buscarDefinicoes();
 
 	function buscarDefinicoes() {
 		connectApp.protocol = $location.protocol();
